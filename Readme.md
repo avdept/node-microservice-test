@@ -6,12 +6,12 @@
 
 #### Login
 
-* `POST /login` with params `{ username: XX, password: XX }` returns `{ jwt_token: 'XXXXX' }`
+* `POST /sessions/create` with params `{ username: XX, password: XX }` returns `{ jwt_token: 'XXXXX' }`
 * Available credentials: `admin:admin, user:user`
 
 #### Generate
 
-* `POST /generate` with params `task: { some: 'test', values: 'here' }`
+* `POST /task_generators/create` with params `task: { some: 'test', values: 'here' }`
 * Header - `Authorization: Bearer JWT_TOKEN`
 
 
