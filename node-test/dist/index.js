@@ -45,9 +45,9 @@ amqp.connect('amqp://localhost', function (err, conn) {
 });
 
 app.use(_bodyParser2.default.json());
-app.use('/generate', _access.verifyJWT);
-app.post('/login', _session_controller2.default);
-app.post('/generate', function (req, res) {
+app.use('/tasks_generator/create', _access.verifyJWT);
+app.post('/sessions/create', _session_controller2.default);
+app.post('/tasks_generator/create', function (req, res) {
   (0, _tasks_controller2.default)(req, res, channel);
 });
 

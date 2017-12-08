@@ -25,9 +25,9 @@ amqp.connect('amqp://localhost', (err, conn) => {
 });
 
 app.use(bodyParser.json());
-app.use('/generate', verifyJWT);
-app.post('/login', login);
-app.post('/generate', (req, res) => { generateHandler(req, res, channel); });
+app.use('/tasks_generator/create', verifyJWT);
+app.post('/sessions/create', login);
+app.post('/task_generators/create', (req, res) => { generateHandler(req, res, channel); });
 
 
 app.listen(3005, () => { console.log('Example app listening on port 3005!'); });

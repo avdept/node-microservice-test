@@ -24,7 +24,6 @@ var login = function login(req, res) {
   // user = user.get_from_db(username);
   // if user.password == hash_with_salt(req.body.password) return true;
   var user = findUser(req);
-  console.log(user);
   if (user) {
     // TODO: Refactor this to have also regular user
     var token = (0, _auth.createJWToken)(_extends({}, req.body, { admin: user[2] }));
