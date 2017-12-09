@@ -1,5 +1,5 @@
 
-## Webserver
+## Gateway microservice
 
 * Run `npm install` to install node_modules
 * Run `npm run dev` to run server
@@ -15,7 +15,7 @@
 * Header - `Authorization: Bearer JWT_TOKEN`
 
 
-## Microserver
+## Tasks microservice
 
 * Run `npm install` to install node_modules
 * Run `npm run dev` to run server
